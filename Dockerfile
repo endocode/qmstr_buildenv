@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     curl autoconf make git libgit2-dev libio-captureoutput-perl virtualenv tar build-essential pkg-config protobuf-compiler \
     && rm -rf /var/lib/apt/lists/*
 
+# set up golang
 ENV GO_VERSION=1.12.4
 RUN curl -o /opt/go.tar.gz https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz
 RUN cd /opt && tar -xf go.tar.gz
